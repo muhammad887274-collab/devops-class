@@ -1,0 +1,453 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #212529;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: #0f172a;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #e2e8f0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+.cta-btn {
+    background-color: #0284c7;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #0369a1;
+}
+
+/* Hero Section */
+.hero {
+    height: 85vh;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    max-width: 800px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #94a3b8;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn {
+    padding: 0.8rem 1.8rem;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: transform 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.primary-btn {
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+.secondary-btn {
+    border: 2px solid #38bdf8;
+    color: #38bdf8;
+}
+
+/* About Section */
+.about-section {
+    padding: 5rem 5%;
+    background: #ffffff;
+    text-align: center;
+}
+
+.about-text {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-text h2 {
+    font-size: 2.2rem;
+    color: #0f172a;
+    margin-bottom: 1.5rem;
+}
+
+.about-text p {
+    color: #475569;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* Services */
+.services-section {
+    padding: 5rem 5%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    color: #0f172a;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: #ffffff;
+    padding: 2.5rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.6s ease-out, box-shadow 0.3s, opacity 0.6s ease-out;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.service-card.show-card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.service-card:hover,
+.service-card.show-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: #0284c7;
+    margin-bottom: 1rem;
+}
+
+/* Stats Section Layout Fix */
+.stats-section {
+    background: #36367a;
+    color: #000000;
+    padding: 1rem 1%;
+    text-align: center;
+    display: block; /* Ensures proper block layout flow */
+}
+
+.stats-header-container {
+    max-width: 700px;
+    margin: 0 auto 8rem auto; /* Badha hua gap heading aur numbers ke beech */
+}
+
+.stats-header-container h2 {
+    color: #f8f2f4;
+    font-size: 2.3rem;
+    margin-bottom: 0.1rem;
+}
+
+.stats-header-container p {
+    color: #e0d7e0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.stats-opus {
+    background: #000058;
+    color: #fffdfd;
+    padding: 1rem 1%;
+    text-align: center;
+    display: block; /* Ensures proper block layout flow */
+    
+}
+
+.stats-header-container {
+    max-width: 700px;
+    margin: 0 auto 8rem auto; /* Badha hua gap heading aur numbers ke beech */
+}
+
+.stats-header-container h2 {
+    color: #f8f2f4;
+    font-size: 2.3rem;
+    margin-bottom: 0.1rem;
+}
+
+.stats-header-container p {
+    color: #e0d7e0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+}
+
+.stat-item h3 {
+    font-size: 3rem;
+    color: #fbfeff;
+    margin-bottom: 0.5rem;
+}
+
+/* Contact Form */
+.contact-section {
+    padding: 5rem 5%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.9rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    outline: none;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #0284c7;
+}
+
+footer {
+    background: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Responsive Media Queries */
+/* Mobile Responsive Fixes */
+/* =========================================================
+   COMPLETE RESPONSIVE MEDIA QUERIES (Mobile & Tablet Fixes)
+   ========================================================= */
+
+/* 1. Tablets and Small Laptops (Max Width: 1024px) */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 1rem 3%;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 2. Standard Mobile Devices & Tablets (Max Width: 768px) */
+/* =========================================================
+   COMPLETE RESPONSIVE MEDIA QUERIES (Fixed Header, Grid & Stats)
+   ========================================================= */
+
+/* 1. Tablet & Medium Screens (769px to 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .navbar {
+        padding: 1rem 3%;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .stats-grid {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+/* 2. Tablet View Specific Fixes (Up to 768px) */
+@media (max-width: 768px) {
+    /* Header & Navbar Compact Layout */
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0.8rem 1rem;
+        gap: 0.6rem;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 0.95rem;
+    }
+
+    .cta-btn {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* Hero Section Compact Height */
+    .hero {
+        min-height: auto;
+        padding: 3rem 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .hero-btns {
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+
+    /* Requirement 3: Service Cards 2-Column Break on Tablet */
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+    }
+
+    .service-card {
+        padding: 1.5rem 1rem;
+    }
+
+    /* Requirement 4: Stats Counters in Single Horizontal Line on Tablet */
+    .stats-section {
+        padding: 3.5rem 1rem;
+    }
+
+    .stats-header-container {
+        margin-bottom: 2.5rem;
+    }
+
+    .stats-grid {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        gap: 1rem;
+    }
+
+    .stat-item h3 {
+        font-size: 2.2rem;
+    }
+
+    .stat-item p {
+        font-size: 0.85rem;
+    }
+}
+
+/* 3. Small Mobile Screens (Up to 480px) */
+@media (max-width: 480px) {
+    .nav-links {
+        gap: 0.6rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        width: 100%;
+        max-width: 240px;
+        margin: 0 auto;
+    }
+
+    /* Mobile view par 1 column layout */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Mobile screen choti hone par stats vertical honge taake overflow na ho */
+    .stats-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .stat-item h3 {
+        font-size: 2.5rem;
+    }
+}
